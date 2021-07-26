@@ -7,7 +7,7 @@ from threading import Thread
 # Create your views here.
 def stockPicker(request):
     stock_picker = tickers_nifty50()
-    print(stock_picker)
+    # print(stock_picker)
     context = {
         'stock_picker':stock_picker,
     }
@@ -15,7 +15,7 @@ def stockPicker(request):
 
 def stockTracker(request):
     stockpicker = request.GET.getlist('stockpicker')
-    print(stockpicker)
+    # print(stockpicker)
     data = {}
     available_stocks = tickers_nifty50()
     for i in stockpicker:
@@ -48,9 +48,9 @@ def stockTracker(request):
     
     end = time.time()
     time_taken = end - start
-    print(time_taken)
     
-    print(data)
+    
+    # print(data)
 
     context = {
         'data': data,
