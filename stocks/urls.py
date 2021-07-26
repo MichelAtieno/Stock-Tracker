@@ -1,6 +1,7 @@
 from django.urls import path, include
-from .views import stockPicker
+from .views import stockPicker, stockTracker
 
 urlpatterns = [
-    path('', stockPicker, name='stocktracker'),
+    path('', stockPicker, name='stockpicker'),
+    path('stocktracker/', stockTracker, name='stocktracker'),
 ]
